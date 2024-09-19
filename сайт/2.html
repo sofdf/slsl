@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфолио</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Показ картинки</title>
+</head>
+<body class="light"> <!-- По умолчанию светлая тема -->
+  <header>
+    <div class="header-content">
+      <span  class="header-title">Алешина София</span>
+      <nav>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#my-contacts">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="theme-selector">
+        <label for="theme">Выберите тему:</label>
+        <select id="theme">
+            <option value="light">Светлая</option>
+            <option value="dark">Тёмная</option>
+        </select>
+  
+  <main>
+    <section class="intro">
+      <div class="intro-text">
+        <h1>Меня зовут Алешина София Сергеевна</h1>
+        <p> Я студент МТУСИ, факультета ИТ, группы БФИ204 </p>
+      </div>
+      <img src="duck-ducky.gif" id="animatedImage" class="between-intro-menu" style="max-width: 20%; height: auto; margin: 10px 0;">
+      <img id="displayed-image" src="" alt="Описание картинки" class="between-intro-menu" style="max-width: 10%; height: auto; margin: 10px 0; display: none;">
+      <div class="menu">
+        <button class="image-button" data-image="1.gif" onclick="navigateTo('portfolio')">ПОРТФОЛИО</button>
+        <button class="image-button" data-image="2.gif" onclick="navigateTo('about-me')">ОБО МНЕ</button>
+        <button class="image-button" data-image="3.gif" onclick="navigateTo('my-contacts')">МОИ КОНТАКТЫ</button>
+      </div>
+      
+    </section>
+    
+    <section id="about-me" class="about">
+      <div class="about-content">
+        <img src="1.png" alt="Алешина София">
+        <div class="about-text">
+          <h2>Немного обо мне</h2>
+          <p>......Я учусь на 3 курсе университета МТУСИ......</p>
+          <p>В свободное время....его нет, извините... </p>
+        </div>
+      </div>
+    </section>
+    <section id="portfolio" class="projects">
+      <h2>Мои проекты</h2>
+      <div class="project-grid">
+        <div class="project" id="project-1">
+          <img src="witch.jpg" alt="Проект 1">
+          <h3>Разработка программного средства для контроля знаний на языке С#</h3>
+          <p>Тест, который предназначен для определения уровня знаний по определённой теме.</p>
+          <div class="project-details-content" style="display: none;">
+            <p>Разрабатываемый программный продукт предназначен для изучения и, в последующем, контроля качества усвоения студентами основных определений, принципов и методов, используемых в одной из распространённой деятельности человека – контроль и проверка состояния различных объектов. </p>
+          </div>
+          <button class="project-details">Подробнее</button>
+        </div>
+        <div class="project" id="project-2">
+          <img src="2.png" alt="Проект 2">
+          <h3>Разработка программы на языке Python с использованием методов и структур данных</h3>
+          <p>Программа, которая будет считывать данные из CSV-файла, содержащего информацию о продажах товаров в магазине. </p>
+          <div class="project-details-content" style="display: none;">
+            <p>После считывания файла, реализованы следующие пункты:
+             <p>1.	Рассчитать общую выручку магазина;</p>
+             <p>2.	Найти товар, который был продан наибольшее количество раз;</p>
+             <p>3.	Найти товар, который принес наибольшую выручку;</p>
+             <p>4.	Составить отчет, содержащий информацию об общей выручке магазина, количестве проданных единиц каждого товара и доле каждого товара в общей выручке
+            </p>
+          </div>
+          <button class="project-details">Подробнее</button>
+        </div>
+        <div class="project" id="project-3">
+          <img src="3.png" alt="Проект 3">
+          <h3>Проектирование автоматизированной торгово-складской и логистической системы</h3>
+          <p> На основании анализа предметной области проектируется логическая и физическая структура данных, после чего была построена сама БД.</p>
+          <div class="project-details-content" style="display: none;">
+            <p>1. Разработана логической и даталогической модели базы данных (БД);</p>
+            <p>2. Реализована БД на выбранной СУБД, а также представление кода необходимых объектов на языке SQL с запросами.</p>
+          </div>
+          <button class="project-details">Подробнее</button>
+        </div>
+        <div class="project" id="project-4" style="display: none;">
+          <img src="kot2.jpg" alt="Проект 4">
+          <h3>MatchMe</h3>
+          <p>Проект по дисциплине:
+            программная инженерия</p>
+          <div class="project-details-content" style="display: none;">
+            <p>Наше приложение было разработано не только для того, чтобы находить знакомых со схожими интересами и вести с ними общение, но и для поиска творческих коллективов, которые помогут реализоваться пользователю в своих интересах. </p>
+          </div>
+          <button class="project-details">Подробнее</button>
+        </div>
+        <div class="project" id="project-5" style="display: none;">
+          <img src="kot3.jpg" alt="Проект 5">
+          <h3>Лабораторные работы по дисциплине «Алгоритмы и алгоритмические языки» </h3>
+          <p>Программирование на языке Visual C# с использованием методов.</p>
+          <div class="project-details-content" style="display: none;">
+            <p>Были реализованы 8 лабораторных работ с индвидуальными заданиями, а также с использованием различных методов. </p>
+          </div>
+          <button class="project-details">Подробнее</button>
+        </div>
+      </div>
+      <div class="project-navigation">
+        <button id="prev-project">Назад</button>
+        <button id="next-project">Вперед</button>
+      </div>
+    </section>
+  </section>
+  <!-- Раздел "Мои контакты" -->
+  <section id="my-contacts" class="contacts-section">
+    <h2>Мои контакты</h2>
+    <p>Вы можете связаться со мной по следующим контактам:</p>
+    <ul>
+        <li>Email:sofiaaleshina@mail.ru</li>
+        <li>Телефон: +79619895846</li>
+        <li>Социальные сети: </li>
+        <li><a href="https://vk.com/saske__ychixa" target="_blank">ВКонтакте </a></li> 
+    </ul>
+    <div class="slider">
+      <div class="slides">
+          <img src="kot11.jpg" class="slide" alt="Project 1">
+          <img src="kot.jpg" class="slide" alt="Project 2">
+          <img src="kot1.jpg" class="slide" alt="Project 3">
+      </div>
+  </div>
+  <div class="navigation">
+      <button onclick="prevSlide()">Назад</button>
+      <button onclick="nextSlide()">Вперед</button>
+  </div>
+    <div id="initialText">
+    <button id="changeContent">Telegram</button>
+  </div>
+</section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
+

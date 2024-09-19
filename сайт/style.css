@@ -1,0 +1,485 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+  }
+  
+  header {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .header-content span {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  nav a {
+    margin-left: 20px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .intro-text {
+    background-color: #d9ff00;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 600px;
+    margin-left: 20px; /* Добавляем отступ слева для разделения */
+}
+  
+  .intro-text h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .intro-text p {
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .menu {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px; /* Закругленные углы */
+    border: 4px solid #333;
+    padding: 10px;
+  }
+  
+  .menu button {
+    background-color: #f0f0f0;
+    outline: none; /* Убираем обводку при фокусе */
+    border-color:#d9ff00; /* Цвет рамки при фокусе */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+    border-radius: 5px; /* Закругленные углы */
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .projects {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+  }
+  
+  .projects h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+  
+  .project {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .project img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .project h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .project p {
+    color: #666;
+    font-size: 14px;
+    flex-grow: 1; /* Добавляем это, чтобы текст проекта растягивался */
+  }
+  
+  .project-details {
+    background-color: #d9ff00;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .cta {
+    display: block;
+    margin: 50px auto;
+    padding: 15px 30px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+  }
+/* Остальные стили, как и раньше */
+
+.about {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+  }
+  
+  .about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  .about img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .about-text h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .about-text p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+    /* Остальные стили, как и раньше */
+
+.project-details-content {
+  text-align: left;
+  margin-top: 10px;
+}
+
+/* Стили для светлой темы */
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.project-grid{
+  background-color: #f0f0f0; /* Светлый фон для светлой темы */
+}
+
+
+/* Стили для тёмной темы */
+body.dark {
+  background-color: #000000;
+  color: #9d9d9d; /* Цвет текста в тёмной теме */
+}
+
+
+body.dark .project-grid {
+  background-color: #0c0c0c; /* Тёмный фон для тёмной темы */
+  color: #454141; /* Цвет текста в тёмной теме */ 
+}
+body.dark .project {
+  background-color: #c3e11a; /* Тёмный фон для тёмной темы */
+}
+body.dark .menu button {
+  background-color: #333333;
+  color: #9d9d9d; /* Цвет текста в тёмной теме */
+
+}
+.menu {
+  margin-top: 20px;
+}
+
+.between-intro-menu {
+  margin-top: 10px;
+}
+
+.image-display {
+  margin-top: 20px;
+}
+
+.image-display img {
+  max-width: 100%;
+  height: auto;
+}
+.project-navigation {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .project-navigation button {
+    background-color: #d9ff00; 
+    color: rgb(33, 31, 31); /* Белый текст */
+    border: none; /* Убираем рамку */
+    padding: 10px 20px; /* Отступы */
+    text-align: center; /* Центрируем текст */
+    text-decoration: none; /* Убираем подчеркивание */
+    display: inline-block; /* Делаем кнопки блочными элементами */
+    font-size: 16px; /* Размер шрифта */
+    margin: 0 10px; /* Отступы между кнопками */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer; /* Курсор в виде указателя */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+  }
+  
+  .project-navigation button:hover {
+    background-color: #ff0000; /* Цвет при наведении */
+    color: rgb(255, 255, 255);
+  }
+
+
+  .theme-selector {
+    vertical-align: left;
+    margin: 0 auto;
+
+      
+  }
+  
+  .theme-selector label {
+    display: block; /* Делаем метку блочным элементом */
+    font-size: 14px; /* Размер шрифта для метки */
+    margin-bottom: 10px; /* Отступ снизу от метки */
+  }
+  
+  #theme {
+    background-color: #f0f0f0; /* Светлый фон для светлой темы */
+    color: #333; /* Цвет текста */
+    border: 1px solid #ccc; /* Рамка */
+    border-radius: 5px; /* Закругленные углы */
+    padding: 10px; /* Отступы внутри селектора */
+    font-size: 15px; /* Размер шрифта */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+  }
+  
+  #theme:focus {
+    outline: none; /* Убираем обводку при фокусе */
+    border-color:#d9ff00; /* Цвет рамки при фокусе */
+  }
+  
+  body.dark #theme {
+    background-color: #333; /* Темный фон для тёмной темы */
+    color: #f0f0f0; /* Светлый текст */
+    border-color: #d9ff00; /* Темная рамка */
+  }
+
+  .contacts-section {
+    text-align: center; /* Центрируем текст */
+    margin: 50px auto; /* Отступы сверху и снизу, центрирование */
+    padding: 20px; /* Внутренние отступы */
+    background-color: #f9f9f9; /* Светлый фон */
+    border: 1px solid #ccc; /* Рамка */
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для глубины */
+    max-width: 600px; /* Максимальная ширина */
+}
+
+.contacts-section h2 {
+  color: #d9ff00; /* Цвет заголовка */
+  text-shadow: 
+      1px 1px 0 black, 
+      -1px -1px 0 black,
+      1px -1px 0 black,
+      -1px 1px 0 black; /* Обводка с более мягким эффектом */
+}
+
+
+.contacts-section p {
+    font-size: 20px; /* Размер шрифта для параграфа */
+}
+
+.contacts-section ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 1; /* Убираем отступы */
+    
+}
+
+.contacts-section li {
+    margin: 10px 0; /* Отступы между элементами списка */
+    
+}
+
+body.dark .contacts-section {
+  text-align: center; /* Центрируем текст */
+  margin: 50px auto; /* Отступы сверху и снизу, центрирование */
+  padding: 20px; /* Внутренние отступы */
+  background-color: #333333; /* темный фон */
+  color: #9d9d9d; /* Цвет текста в тёмной теме */
+  border: 1px solid #d9ff00; /* Рамка */
+  border-radius: 10px; /* Закругленные углы */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для глубины */
+  max-width: 600px; /* Максимальная ширина */
+}
+
+.header-content {
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    align-items: center; /* Выравниваем по вертикали */
+    padding: 10px; /* Добавляем отступы */
+}
+
+body {
+  background-color: #f4f4f4; /* Цвет фона страницы */
+  font-family: Arial, sans-serif; /* Шрифт для страницы */
+}
+
+.slider {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px; /* Закругленные углы слайдера */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Тень для слайдера */
+  background-color: #fff; /* Цвет фона слайдера */
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Плавный переход при смене слайда */
+}
+
+.slide {
+  width: 100%;
+  flex: 1 0 100%;
+  border-radius: 10px; /* Закругленные углы для изображений */
+}
+
+.slide img {
+  width: 100%; /* Изображения занимают всю ширину слайда */
+  border-radius: 10px; /* Закругленные углы для изображений */
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.navigation button {
+  padding: 10px 20px; /* Отступы для кнопок */
+  margin: 5px;
+  cursor: pointer;
+  background-color:  #d9ff00; /* Цвет фона кнопок */
+  color: rgb(22, 20, 20); /* Цвет текста кнопок */
+  border: none; /* Убираем рамку */
+  border-radius: 5px; /* Закругленные углы для кнопок */
+  transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+.navigation button:hover {
+  background-color:  #d9ff00; /* Цвет фона кнопок при наведении */
+}
+
+
+
+#changeContent {
+  padding: 10px 20px; /* Отступы внутри кнопки */
+  font-size: 16px; /* Размер шрифта */
+  color: white; /* Цвет текста */
+  background-color: #ea0b0b;; /* Цвет фона кнопки */
+  border: none; /* Убираем рамку */
+  border-radius: 5px; /* Скругленные углы */
+  cursor: pointer; /* Указатель при наведении */
+  transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+#changeContent:hover {
+  background-color:  #d9ff00; /* Цвет фона при наведении */
+  color: rgb(26, 23, 23); /* Цвет текста */
+}
+
+.slider {
+  width: 50%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 50%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  width: 50%;
+  flex: 1 0 100%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.navigation button {
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.image-container {
+  width: 200px; /* Установите ширину контейнера */
+  overflow: hidden;
+}
+
+#animatedImage {
+  width: 100%; /* Изображение занимает всю ширину контейнера */
+  transition: transform 0.3s ease; /* Плавный переход для анимации */
+}
+
+#animatedImage.hover {
+  transform: scale(1.5); /* Увеличение изображения при наведении */
+}
+#imageContainer {
+  display: none; /* Скрываем контейнер с картинкой изначально */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный фон */
+  justify-content: center;
+  align-items: center;
+}
+#imageContainer img {
+  max-width: 80%; /* Максимальная ширина изображения */
+  height: auto; /* Автоматическая высота */
+  
+}
